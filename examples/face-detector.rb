@@ -11,4 +11,7 @@ rectangles.each do |rectangle|
   image.draw_rectangle(rectangle, 0, 0, 255)
 end
 
-image.save_jpeg('output.jpg')
+widgets = DLIB::Widgets.new
+widgets.clear_overlay
+widgets.set_image(image)
+widgets.wait_until_closed
