@@ -19,3 +19,4 @@ widgets = DLIB::Widgets.new
 widgets.clear_overlay
 widgets.set_image(image)
 widgets.add_overlay(DLIB::OverlayLine.render_face_detections(shapes))
+widgets.wait_until_closed
