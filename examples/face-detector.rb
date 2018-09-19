@@ -11,7 +11,7 @@ rectangles.each do |rectangle|
   image.draw_rectangle(rectangle, 0, 0, 255)
 end
 
-widgets = DLIB::Widgets.new
-widgets.clear_overlay
-widgets.set_image(image)
-widgets.wait_until_closed
+image_window = DLIB::ImageWindow.new
+image_window.clear_overlay
+image_window.set_image(image)
+image_window.wait_until_closed
