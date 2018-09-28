@@ -2,11 +2,11 @@ require "gobject-introspection"
 
 require "dlib/version"
 
-module DLIB
+module Dlib
   class Loader < GObjectIntrospection::Loader
   end
 
-  Loader.load("DLIB", self)
+  Loader.load("Dlib", self)
 
   class Image
     alias_method :initialize_raw, :initialize

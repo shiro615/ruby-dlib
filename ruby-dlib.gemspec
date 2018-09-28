@@ -3,7 +3,7 @@ require "dlib/version"
 
 Gem::Specification.new do |spec|
   spec.name = "ruby-dlib"
-  spec.version = DLIB::VERSION
+  spec.version = Dlib::VERSION
   spec.homepage = "https://github.com/shiro615/ruby-dlib"
   spec.authors = ["Yosuke Shiro"]
   spec.email = ["ys2014hs@gmail.com"]
