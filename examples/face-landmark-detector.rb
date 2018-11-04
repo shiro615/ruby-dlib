@@ -5,7 +5,7 @@ image_file = ARGV[0]
 shape_predictor_file = ARGV[1]
 shape_predictor = Dlib::ShapePredictor.new(shape_predictor_file)
 image = Dlib::Image.new(Pathname(image_file))
-detector = Dlib::Detector.new
+detector = Dlib::FrontalFaceDetector.new
 
 rectangles = detector.detect(image)
 shapes = []

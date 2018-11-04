@@ -3,7 +3,7 @@ require 'pathname'
 
 image_file = ARGV[0]
 image = Dlib::Image.new(Pathname(image_file))
-detector = Dlib::Detector.new
+detector = Dlib::FrontalFaceDetector.new
 
 rectangles = detector.detect(image)
 
