@@ -31,9 +31,20 @@ Install Ruby Dlib after you install Dlib GLib:
 ## Usage
 
 ```ruby
-require "dlib"
+require 'dlib'
+require 'pathname'
 
-# TODO
+image_file = ARGV[0]
+image = Dlib::Image.new(Pathname(image_file))
+detector = Dlib::FrontalFaceDetector.new
+
+rectangles = detector.detect(image)
+
+rectangles.each do |rectangle|
+  image.draw_rectangle(rectangle, 0, 0, 255)
+end
+
+image.save_jpeg('output.jpg')
 ```
 
 ## Dependencies
